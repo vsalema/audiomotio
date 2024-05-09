@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" lang="en-US">
-
 <head>
 	<meta charset="utf-8">
 <!--
@@ -33,19 +32,20 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
  -->
+
 	<title>audioMotion</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="fonts/styles.css">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="img/icons/css/styles.css">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon32.png">
-<link rel="manifest" href="manifest.json">
-	<link rel="apple-touch-icon" href="img/favicon256.png">
- 	<meta name="msapplication-TileImage" content="img/favicon256.png">
+	<link rel="stylesheet" href="https://audiomotion.app/fonts/styles.css">
+	<link rel="stylesheet" href="https://audiomotion.app/styles.css">
+	<link rel="stylesheet" href="https://audiomotion.app/img/icons/css/styles.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://audiomotion.app/img/favicon32.png">
+<link rel="manifest" href="https://audiomotion.app/manifest.json">
+	<link rel="apple-touch-icon" href="https://audiomotion.app/img/favicon256.png">
+ 	<meta name="msapplication-TileImage" content="https://audiomotion.app/img/favicon256.png">
 	<meta name="description" content="audioMotion | media player and real-time audio spectrum analyzer">
-	<meta property="og:url" content="index.html">
+	<meta property="og:url" content="https://audiomotion.app">
 	<meta property="og:title" content="audioMotion">
-	<meta property="og:image" content="docs/img/audioMotion-header.png">
+	<meta property="og:image" content="https://audiomotion.app/docs/img/audioMotion-header.png">
 	<meta property="og:site_name" content="audioMotion">
 	<meta property="og:description" content="media player and real-time audio spectrum analyzer">
 	<meta property="og:type" content="website">
@@ -74,11 +74,19 @@
 					<div class="warp-wall warp-wall-back"></div>
 				</div>
 			</div>
-			
-                        <video id="video" autoplay loop muted disablepictureinpicture></video>
+			<video id="video" autoplay loop muted disablepictureinpicture></video>
 			<video id="player0" preload="auto" crossorigin="anonymous" disablepictureinpicture></video>
-                        <video id="player1" preload="auto" crossorigin="anonymous" disablepictureinpicture></video>
-                        <div id="bg_dim" class="bg-dim"></div>
+			<video id="player1" preload="auto" crossorigin="anonymous" disablepictureinpicture></video>
+			
+      
+      
+      
+      
+      
+      
+      
+      
+      <div id="bg_dim" class="bg-dim"></div>
 			<div id="analyzer" class="analyzer"></div>
 			<canvas id="osd" class="osd"></canvas>
 		</div>
@@ -451,7 +459,7 @@
 				</div>
 				<div id="loaded_playlist"></div>
 				<div class="playlist-bar flex align-baseline">
-					<select id="playlists"></select>
+					<select id="playlists"><option value="" disabled="">Select a playlist</option><option value="play3" data-is-local="1">play3</option></select>
 					<span class="help"><button id="load_playlist">Load</button>
 						<span class="tooltip">Load selected playlist</span>
 					</span>
@@ -459,7 +467,7 @@
 						<span class="tooltip">Delete selected playlist</span>
 					</span>
 				</div>
-				<ul id="playlist" class="filelist"></ul>
+<ul id="playlist" class="filelist"><li data-album="" data-artist="" data-codec="MPEG 1 Layer 3"  data-cover="https://radioalfa.net/wp-content/uploads/2023/02/logo-radio-alfa-DAB-avril-2021-294x300.png" data-duration="" data-file="https://n16a-eu.rcs.revma.com/amrbkhqtkm0uv?rj-ttl=5&amp;amp;rj-tok=AAABjyZZV10A8pNBeIWHkkzM-w" data-quality="192K CBR" data-title="Radio Alfa" class="current"></li><li data-album="" data-artist="" data-codec="MPEG 1 Layer 3" data-cover="https://upload.wikimedia.org/wikipedia/commons/6/66/R%C3%A1dio_Comercial.png" data-duration="" data-file="https://stream-icy.bauermedia.pt/comercial.mp3" data-quality="128K CBR" data-title="Radio comercial"></li><li data-album="" data-artist="" data-codec="AAC" data-cover="" data-duration="" data-file="https://22673.live.streamtheworld.com/RADIO_RENASCENCAAAC.aac" data-quality="" data-title="RADIO RENASCENCAAAC"></li><li data-album="" data-artist="" data-codec="AAC" data-cover="" data-duration="" data-file="https://stream-icy.bauermedia.pt/m80.aac" data-quality="127K AAC LC" data-title="m80"></li><li data-album="" data-artist="" data-codec="AAC" data-cover="" data-duration="" data-file="https://stream-icy.bauermedia.pt/cidade.aac" data-quality="134K AAC LC" data-title="cidade"></li><li data-album="" data-artist="" data-codec="MP3" data-cover="" data-duration="" data-file="http://radiocast.rtp.pt/antena180a.mp3" data-quality="" data-title="antena180a"></li></ul>
 				<p class="center">Double-click to play / Drag to reorder / <kbd>Delete</kbd> to remove</p>
 			</div>
 		</div> <!-- #files_panel -->
@@ -471,14 +479,14 @@
 			<a href="#!" class="modal-close-internal"></a>
 			<div>
 				<h3>Enabled Analyzer Modes:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=enabled-analyzer-modes" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=enabled-analyzer-modes" target="_blank"></a>
 				</h3>
 				<div id="enabled_modes" class="grid grid-2-cols">
 				</div>
 			</div>
 			<div>
 				<h3>Enabled Gradients:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=enabled-gradients" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=enabled-gradients" target="_blank"></a>
 				</h3>
 				<div id="enabled_gradients" class="grid grid-3-cols">
 				</div>
@@ -486,21 +494,21 @@
 			</div>
 			<div>
 				<h3>Enabled options for Background Image Fit:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=enabled-options-for-background-image-fit" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=enabled-options-for-background-image-fit" target="_blank"></a>
 				</h3>
 				<div id="enabled_bgfit" class="grid grid-2-cols">
 				</div>
 			</div>
 			<div>
 				<h3>Settings affected by Randomize:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=settings-affected-by-randomize" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=settings-affected-by-randomize" target="_blank"></a>
 				</h3>
 				<div id="random_properties" class="grid grid-3-cols">
 				</div>
 			</div>
 			<div class="general-settings grid grid-2-cols align-center">
 				<h3 class="colspan-2">General settings:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=general-settings" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=general-settings" target="_blank"></a>
 				</h3>
 				<p>Background media source:</p>
 				<select id="bg_location"></select>
@@ -535,7 +543,7 @@
 			</div>
 			<div>
 				<h3>Sensitivity presets:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=sensitivity-presets" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=sensitivity-presets" target="_blank"></a>
 				</h3>
 				<table class="table-fixed">
 					<tr>
@@ -569,7 +577,7 @@
 				</table>
 
 				<h3>On-screen information display options:
-					<a class="link-to-docs" href="docs/index.html#/users-manual?id=on-screen-information-display-options" target="_blank"></a>
+					<a class="link-to-docs" href="https://audiomotion.app/docs/#/users-manual?id=on-screen-information-display-options" target="_blank"></a>
 				</h3>
 				<p>Duration (in seconds) of displayed information:</p>
 				<div class="grid grid-2-cols">
@@ -646,11 +654,11 @@
 			<a href="#!" class="modal-close-internal"></a>
 			<div class="credits">
 				<h1>audioMotion</h1>
-				<div><a href="docs/changelog.html" title="click for changelog" target="_blank">version <span id="version"></span></a></div>
+				<div><a href="https://audiomotion.app/docs/changelog" title="click for changelog" target="_blank">version <span id="version"></span></a></div>
 				<p>Copyright &copy; 2018-2024 Henrique Avila Vianna</p>
 				<ul>
-					<li><a href="docs/index.html" target="_blank">Website</a></li>
-					<li><a href="docs/users-manual.html" target="_blank">User's Manual</a></li>
+					<li><a href="https://audiomotion.app/docs" target="_blank">Website</a></li>
+					<li><a href="https://audiomotion.app/docs/users-manual" target="_blank">User's Manual</a></li>
 					<li><a href="https://github.com/hvianna/audioMotion.js/" target="_blank">GitHub</a></li>
 				</ul>
 			</div>
@@ -688,12 +696,13 @@
 		</div>
 	</div> <!-- #shortcuts -->
 
-	<div id="update-banner" class="update-banner"><a href="docs/changelog.html" target="_blank">audioMotion has been updated to the latest version!</a></div>
+	<div id="update-banner" class="update-banner"><a href="https://audiomotion.app/docs/changelog" target="_blank">audioMotion has been updated to the latest version!</a></div>
 
-	<script src="vendors.js"></script>
-	<script src="audioMotion.js"></script>
+	<script src="https://audiomotion.app/vendors.js"></script>
+	<script src="https://audiomotion.app/audioMotion.js"></script>
 
 </body>
-
-<!-- Mirrored from audiomotion.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 May 2024 14:16:54 GMT -->
 </html>
+  
+  
+  
