@@ -32,16 +32,14 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
  -->
-
 	<title>audioMotion</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="fonts/styles.css">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="img/icons/css/styles.css">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://audiomotion.app/img/favicon32.png">
-<link rel="manifest" href="https://audiomotion.app/manifest.json">
-	<link rel="apple-touch-icon" href="https://audiomotion.app/img/favicon256.png">
- 	<meta name="msapplication-TileImage" content="https://audiomotion.app/img/favicon256.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon32.png">
+	<link rel="apple-touch-icon" href="img/favicon256.png">
+ 	<meta name="msapplication-TileImage" content="img/favicon256.png">
 	<meta name="description" content="audioMotion | media player and real-time audio spectrum analyzer">
 	<meta property="og:url" content="https://audiomotion.app">
 	<meta property="og:title" content="audioMotion">
@@ -51,18 +49,7 @@
 	<meta property="og:type" content="website">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@HenriqueVianna">
-  <style>
-  
-#lef {
-  left: 96px;
-  position: absolute;
-}
-  
-  </style>
-  
-  
-  
-  </head>
+</head>
 
 <body>
 	<!-- ANALYZER & PLAYER AREA -->
@@ -88,16 +75,7 @@
 			<video id="video" autoplay loop muted disablepictureinpicture></video>
 			<video id="player0" preload="auto" crossorigin="anonymous" disablepictureinpicture></video>
 			<video id="player1" preload="auto" crossorigin="anonymous" disablepictureinpicture></video>
-			
-      
-      
-      
-      
-      
-      
-      
-      
-      <div id="bg_dim" class="bg-dim"></div>
+			<div id="bg_dim" class="bg-dim"></div>
 			<div id="analyzer" class="analyzer"></div>
 			<canvas id="osd" class="osd"></canvas>
 		</div>
@@ -470,7 +448,7 @@
 				</div>
 				<div id="loaded_playlist"></div>
 				<div class="playlist-bar flex align-baseline">
-					<select id="playlists"><option value="" disabled="">Select a playlist</option><option value="play3" data-is-local="1">play3</option></select>
+					<select id="playlists"></select>
 					<span class="help"><button id="load_playlist">Load</button>
 						<span class="tooltip">Load selected playlist</span>
 					</span>
@@ -478,21 +456,7 @@
 						<span class="tooltip">Delete selected playlist</span>
 					</span>
 				</div>
-<ul id="playlist" class="filelist"><li data-album="" data-artist="" data-codec="MPEG 1 Layer 3"  data-cover="https://radioalfa.net/wp-content/uploads/2023/02/logo-radio-alfa-DAB-avril-2021-294x300.png" data-duration="" data-file="https://n16a-eu.rcs.revma.com/amrbkhqtkm0uv?rj-ttl=5&amp;amp;rj-tok=AAABjyZZV10A8pNBeIWHkkzM-w" data-quality="192K CBR" data-title=" Alfa" class="current"><img id="lef" src="https://radioalfa.net/wp-content/uploads/2023/02/logo-radio-alfa-DAB-avril-2021-294x300.png" width="25" height="25" draggable="false"></li>
-
-<li data-album="" data-artist="" data-codec="MPEG 1 Layer 3" data-cover="https://www.zupimages.net/up/24/19/xnp6.png" data-duration="" data-file="https://stream-icy.bauermedia.pt/comercial.mp3" data-quality="128K CBR" data-title="comercial"><img id="lef" src="https://www.zupimages.net/up/24/18/ywnd.png" width="35" height="25" draggable="false"></li>
-  
-<li data-album="" data-artist="" data-codec="AAC" data-cover="https://especiais.rr.pt/sondagens/img/rr/renascenca.png" data-duration="" data-file="https://22673.live.streamtheworld.com/RADIO_RENASCENCAAAC.aac" data-quality="" data-title="Renascença"><img id="lef" src="https://especiais.rr.pt/sondagens/img/rr/renascenca.png" width="45" height="25" draggable="false"></li>
-  
-<li data-album="" data-artist="" data-codec="AAC" data-cover="https://www.zupimages.net/up/24/19/mkc6.png" data-duration="" data-file="https://stream-icy.bauermedia.pt/m80.aac" data-quality="127K AAC LC" data-title="m80"><img id="lef" src="https://upload.wikimedia.org/wikipedia/commons/0/02/M80_Portugal.svg" width="35" height="25" draggable="false"></li>
-  
-<li data-album="" data-artist="" data-codec="AAC" data-cover="https://radiosdeportugal.com/wp-content/uploads/2007/07/logo.png" data-duration="" data-file="https://stream-icy.bauermedia.pt/cidade.aac" data-quality="134K AAC LC" data-title="cidade"><img id="lef" src="https://radiosdeportugal.com/wp-content/uploads/2007/07/logo.png" width="35" height="25" draggable="false"></li>
-  
-<li data-album="" data-artist="" data-codec="MP3" data-cover="https://upload.wikimedia.org/wikipedia/fr/7/7c/Antena_1_%28Portugal%29_logo.png" data-duration="" data-file="https://radiocast.rtp.pt/antena180a.mp3" data-quality="" data-title="antena 1"><img id="lef" src="https://upload.wikimedia.org/wikipedia/fr/7/7c/Antena_1_%28Portugal%29_logo.png" width="35" height="25" draggable="false"></li>
-  
- <li data-album="The Highlights (2021)" data-artist="The Weeknd;Max Martin;Oscar Holter;Max Grahn" data-codec="MPEG 1 Layer 3" data-cover="data:image/jpeg;base64,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" data-duration="3:35" data-file="https://ia903405.us.archive.org/30/items/01-save-your-tears/01%20-%20Save%20Your%20Tears.mp3" data-quality="320K CBR" data-title="Save Your Tears" draggable="false" class="current"></li>
-  
-</ul>
+				<ul id="playlist" class="filelist"></ul>
 				<p class="center">Double-click to play / Drag to reorder / <kbd>Delete</kbd> to remove</p>
 			</div>
 		</div> <!-- #files_panel -->
@@ -728,6 +692,3 @@
 
 </body>
 </html>
-  
-  
-  
